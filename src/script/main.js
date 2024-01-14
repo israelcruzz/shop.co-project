@@ -94,8 +94,15 @@ const list = {
 }
 
 const updateNumber = () => {
+  let duplicateNumber = state.page + 1
+  let triplicateNumber = duplicateNumber + 1
+
   html.get('.number').textContent = state.page
+  html.get('.btn-number-pag2').textContent = duplicateNumber
+  html.get('.btn-number-pag3').textContent = triplicateNumber
   html.get('.number').classList.add('btn-number-pag')
+  html.get('.btn-number-pag2').classList.add('btn-number-pag')
+  html.get('.btn-number-pag3').classList.add('btn-number-pag')
 }
 
 const update = () => {
@@ -136,3 +143,11 @@ function init(){
 }
 
 init()
+
+html.get('.cart-btn').addEventListener('click', () => {
+  html.get('.cart-content').showModal()
+})
+
+html.get('.exit-cart').addEventListener('click', () => {
+  html.get('.cart-content').close()
+})

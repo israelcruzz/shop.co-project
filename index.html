@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paginação</title>
+    <title>Shop.co</title>
     <link rel="stylesheet" href="./src/style/index.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,6 +14,108 @@
     />
   </head>
   <body>
+    <dialog class="cart-content">
+      <div class="cart-header-dialog">
+        <div class="header-title-cart">
+            <h1 class="title-cart">Your Cart</h1>
+            <span class="exit-cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19.5459 17.9541C19.7572 18.1654 19.876 18.452 19.876 18.7509C19.876 19.0498 19.7572 19.3365 19.5459 19.5478C19.3346 19.7592 19.0479 19.8779 18.749 19.8779C18.4501 19.8779 18.1635 19.7592 17.9521 19.5478L12 13.5937L6.0459 19.5459C5.83455 19.7573 5.54791 19.876 5.24902 19.876C4.95014 19.876 4.66349 19.7573 4.45215 19.5459C4.2408 19.3346 4.12207 19.0479 4.12207 18.7491C4.12207 18.4502 4.2408 18.1635 4.45215 17.9522L10.4062 12L4.45402 6.04593C4.24268 5.83459 4.12395 5.54795 4.12395 5.24906C4.12395 4.95017 4.24268 4.66353 4.45402 4.45218C4.66537 4.24084 4.95201 4.12211 5.2509 4.12211C5.54978 4.12211 5.83643 4.24084 6.04777 4.45218L12 10.4062L17.954 4.45125C18.1654 4.2399 18.452 4.12117 18.7509 4.12117C19.0498 4.12117 19.3364 4.2399 19.5478 4.45125C19.7591 4.66259 19.8778 4.94924 19.8778 5.24812C19.8778 5.54701 19.7591 5.83365 19.5478 6.045L13.5937 12L19.5459 17.9541Z" fill="black" fill-opacity="0.4"/>
+                  </svg>
+            </span>
+        </div>
+        <div class="container-products">
+          <div class="product-cart">
+            <section class="image-cart">
+              <img src="./src/img/product-image.png" class="img-cart" />
+            </section>
+
+            <section class="details-cart">
+              <div class="cart-header">
+                <h1>Checkered Shirt</h1>
+                <span class="delete-cart"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.875 3.75003H13.75V3.12503C13.75 2.62775 13.5525 2.15084 13.2008 1.79921C12.8492 1.44757 12.3723 1.25003 11.875 1.25003H8.125C7.62772 1.25003 7.15081 1.44757 6.79917 1.79921C6.44754 2.15084 6.25 2.62775 6.25 3.12503V3.75003H3.125C2.95924 3.75003 2.80027 3.81588 2.68306 3.93309C2.56585 4.0503 2.5 4.20927 2.5 4.37503C2.5 4.54079 2.56585 4.69976 2.68306 4.81697C2.80027 4.93418 2.95924 5.00003 3.125 5.00003H3.75V16.25C3.75 16.5816 3.8817 16.8995 4.11612 17.1339C4.35054 17.3683 4.66848 17.5 5 17.5H15C15.3315 17.5 15.6495 17.3683 15.8839 17.1339C16.1183 16.8995 16.25 16.5816 16.25 16.25V5.00003H16.875C17.0408 5.00003 17.1997 4.93418 17.3169 4.81697C17.4342 4.69976 17.5 4.54079 17.5 4.37503C17.5 4.20927 17.4342 4.0503 17.3169 3.93309C17.1997 3.81588 17.0408 3.75003 16.875 3.75003ZM8.75 13.125C8.75 13.2908 8.68415 13.4498 8.56694 13.567C8.44973 13.6842 8.29076 13.75 8.125 13.75C7.95924 13.75 7.80027 13.6842 7.68306 13.567C7.56585 13.4498 7.5 13.2908 7.5 13.125V8.12503C7.5 7.95927 7.56585 7.8003 7.68306 7.68309C7.80027 7.56588 7.95924 7.50003 8.125 7.50003C8.29076 7.50003 8.44973 7.56588 8.56694 7.68309C8.68415 7.8003 8.75 7.95927 8.75 8.12503V13.125ZM12.5 13.125C12.5 13.2908 12.4342 13.4498 12.3169 13.567C12.1997 13.6842 12.0408 13.75 11.875 13.75C11.7092 13.75 11.5503 13.6842 11.4331 13.567C11.3158 13.4498 11.25 13.2908 11.25 13.125V8.12503C11.25 7.95927 11.3158 7.8003 11.4331 7.68309C11.5503 7.56588 11.7092 7.50003 11.875 7.50003C12.0408 7.50003 12.1997 7.56588 12.3169 7.68309C12.4342 7.8003 12.5 7.95927 12.5 8.12503V13.125ZM12.5 3.75003H7.5V3.12503C7.5 2.95927 7.56585 2.8003 7.68306 2.68309C7.80027 2.56588 7.95924 2.50003 8.125 2.50003H11.875C12.0408 2.50003 12.1997 2.56588 12.3169 2.68309C12.4342 2.8003 12.5 2.95927 12.5 3.12503V3.75003Z"
+                      fill="#FF3333"
+                    /></svg
+                ></span>
+              </div>
+              <h1 class="size">Size: <span class="size-inf">Medium</span></h1>
+              <h1 class="color">Color: <span class="color-inf">Red</span></h1>
+
+              <div class="price-amount">
+                <h1 class="price-cart">$180</h1>
+                <div class="amount-content">
+                  <span class="remove-cart">-</span>
+                  <span class="number-cart">1</span>
+                  <span class="add-cart">+</span>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="product-cart">
+            <section class="image-cart">
+              <img src="./src/img/product-image.png" class="img-cart" />
+            </section>
+
+            <section class="details-cart">
+              <div class="cart-header">
+                <h1>Checkered Shirt</h1>
+                <span class="delete-cart"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.875 3.75003H13.75V3.12503C13.75 2.62775 13.5525 2.15084 13.2008 1.79921C12.8492 1.44757 12.3723 1.25003 11.875 1.25003H8.125C7.62772 1.25003 7.15081 1.44757 6.79917 1.79921C6.44754 2.15084 6.25 2.62775 6.25 3.12503V3.75003H3.125C2.95924 3.75003 2.80027 3.81588 2.68306 3.93309C2.56585 4.0503 2.5 4.20927 2.5 4.37503C2.5 4.54079 2.56585 4.69976 2.68306 4.81697C2.80027 4.93418 2.95924 5.00003 3.125 5.00003H3.75V16.25C3.75 16.5816 3.8817 16.8995 4.11612 17.1339C4.35054 17.3683 4.66848 17.5 5 17.5H15C15.3315 17.5 15.6495 17.3683 15.8839 17.1339C16.1183 16.8995 16.25 16.5816 16.25 16.25V5.00003H16.875C17.0408 5.00003 17.1997 4.93418 17.3169 4.81697C17.4342 4.69976 17.5 4.54079 17.5 4.37503C17.5 4.20927 17.4342 4.0503 17.3169 3.93309C17.1997 3.81588 17.0408 3.75003 16.875 3.75003ZM8.75 13.125C8.75 13.2908 8.68415 13.4498 8.56694 13.567C8.44973 13.6842 8.29076 13.75 8.125 13.75C7.95924 13.75 7.80027 13.6842 7.68306 13.567C7.56585 13.4498 7.5 13.2908 7.5 13.125V8.12503C7.5 7.95927 7.56585 7.8003 7.68306 7.68309C7.80027 7.56588 7.95924 7.50003 8.125 7.50003C8.29076 7.50003 8.44973 7.56588 8.56694 7.68309C8.68415 7.8003 8.75 7.95927 8.75 8.12503V13.125ZM12.5 13.125C12.5 13.2908 12.4342 13.4498 12.3169 13.567C12.1997 13.6842 12.0408 13.75 11.875 13.75C11.7092 13.75 11.5503 13.6842 11.4331 13.567C11.3158 13.4498 11.25 13.2908 11.25 13.125V8.12503C11.25 7.95927 11.3158 7.8003 11.4331 7.68309C11.5503 7.56588 11.7092 7.50003 11.875 7.50003C12.0408 7.50003 12.1997 7.56588 12.3169 7.68309C12.4342 7.8003 12.5 7.95927 12.5 8.12503V13.125ZM12.5 3.75003H7.5V3.12503C7.5 2.95927 7.56585 2.8003 7.68306 2.68309C7.80027 2.56588 7.95924 2.50003 8.125 2.50003H11.875C12.0408 2.50003 12.1997 2.56588 12.3169 2.68309C12.4342 2.8003 12.5 2.95927 12.5 3.12503V3.75003Z"
+                      fill="#FF3333"
+                    /></svg
+                ></span>
+              </div>
+              <h1 class="size">Size: <span class="size-inf">Medium</span></h1>
+              <h1 class="color">Color: <span class="color-inf">Red</span></h1>
+
+              <div class="price-amount">
+                <h1 class="price-cart">$180</h1>
+                <div class="amount-content">
+                  <span class="remove-cart">-</span>
+                  <span class="number-cart">1</span>
+                  <span class="add-cart">+</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="checkout">
+        Go to Checkout
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M11.9133 3.71175L17.5383 9.33675C17.6257 9.42385 17.695 9.52734 17.7423 9.6413C17.7897 9.75525 17.814 9.87743 17.814 10.0008C17.814 10.1242 17.7897 10.2464 17.7423 10.3603C17.695 10.4743 17.6257 10.5778 17.5383 10.6649L11.9133 16.2899C11.7372 16.466 11.4983 16.5649 11.2492 16.5649C11.0001 16.5649 10.7613 16.466 10.5852 16.2899C10.409 16.1138 10.3101 15.8749 10.3101 15.6258C10.3101 15.3767 10.409 15.1379 10.5852 14.9618L14.6094 10.9375L3.125 10.9375C2.87636 10.9375 2.6379 10.8388 2.46209 10.6629C2.28627 10.4871 2.1875 10.2487 2.1875 10C2.1875 9.75139 2.28627 9.51294 2.46209 9.33712C2.6379 9.16131 2.87636 9.06253 3.125 9.06253L14.6094 9.06253L10.5844 5.03832C10.4083 4.8622 10.3093 4.62333 10.3093 4.37425C10.3093 4.12518 10.4083 3.88631 10.5844 3.71019C10.7605 3.53407 10.9994 3.43513 11.2484 3.43513C11.4975 3.43513 11.7364 3.53407 11.9125 3.71019L11.9133 3.71175Z"
+            fill="white"
+          />
+        </svg>
+      </button>
+    </dialog>
+
     <header>
       <div class="header-content">
         <h1 class="title-header">SHOP.CO</h1>
@@ -38,24 +140,26 @@
         </div>
 
         <div class="icons">
-          <img src="./src/img/icon-cart.svg" alt="icon cart" />
+          <button class="cart-btn">
+            <img src="./src/img/icon-cart.svg" alt="icon cart" />
+          </button>
           <img src="./src/img/icon-user.svg" alt="icon user" />
         </div>
       </div>
     </header>
 
     <section class="product">
-        <div class="title-section">
-          <h1>Casual</h1>
-          <span
-            >Showing 1-10 of 100 Products Sort by: <b>Most Popular</b>
-            <img src="./src/img/icon-dropdown.svg" alt="icon menu dropdown"/>
+      <div class="title-section">
+        <h1>Casual</h1>
+        <span
+          >Showing 1-10 of 100 Products Sort by: <b>Most Popular</b>
+          <img src="./src/img/icon-dropdown.svg" alt="icon menu dropdown" />
         </span>
-        </div>
+      </div>
 
       <div class="products">
         <div class="column">
-            <!-- <div class="card">
+          <!-- <div class="card">
                 <img src="./src/img/product-image.png" class="img-card">
                 <h1 class="title-card">Gradient Graphic T-shirt</h1>
                 <div class="review">
@@ -191,37 +295,37 @@
 
       <div class="pagination">
         <div class="btn-previous">
-            <button>
-                <img src="./src/img/arrow-left.svg" alt="icon previus page">
-                <a href="" class="previus">Previus</a>
-            </button>
+          <button>
+            <img src="./src/img/arrow-left.svg" alt="icon previus page" />
+            <a href="" class="previus">Previus</a>
+          </button>
         </div>
 
         <div class="pags">
-            <div class="number">
-                <button class="btn-number-pag">
-                    <a href="./produtos1.html">1</a>
-                </button>
-            </div>
+          <div class="number">
+            <button class="btn-number-pag">
+              <a href="./produtos1.html">1</a>
+            </button>
+          </div>
 
-            <div class="number">
-                <button class="btn-number-pag">
-                    <a href="/produtos2.html">2</a>
-                </button>
-            </div>
+          <div class="number">
+            <button class="btn-number-pag2">
+              <a href="/produtos2.html">2</a>
+            </button>
+          </div>
 
-            <div class="number">
-                <button class="btn-number-pag">
-                    <a href="/produtos3.html">3</a>
-                </button>
-            </div>
+          <div class="number">
+            <button class="btn-number-pag3">
+              <a href="/produtos3.html">3</a>
+            </button>
+          </div>
         </div>
 
         <div class="btn-next">
-            <button>
-                <img src="./src/img/arrow-right.svg" alt="icon next page">
-                <a href="" class="next">Next</a>
-            </button>
+          <button>
+            <img src="./src/img/arrow-right.svg" alt="icon next page" />
+            <a href="" class="next">Next</a>
+          </button>
         </div>
       </div>
     </section>
