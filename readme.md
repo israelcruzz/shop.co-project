@@ -15,6 +15,9 @@ O Shop.co é um projeto de estudos em JavaScript voltado para o desenvolvimento 
 
 - **Barra de Pesquisa:**
   - Implementação de uma barra de pesquisa para filtrar produtos.
+ 
+- **JSON de Produtos Dinâmico:**
+  - Criação de um arquivo JSON contendo os produtos, possibilitando a geração dinâmica do conteúdo da loja.
 
 ## Próximos Passos
 
@@ -25,9 +28,6 @@ O projeto Shop.co está em constante evolução, e os próximos passos incluem a
 
 - **Carrinho de Compras:**
   - Desenvolvimento de um carrinho de compras para que os usuários possam adicionar produtos e realizar a compra.
-
-- **JSON de Produtos Dinâmico:**
-  - Criação de um arquivo JSON contendo os produtos, possibilitando a geração dinâmica do conteúdo da loja.
 
 ## Como Contribuir
 
