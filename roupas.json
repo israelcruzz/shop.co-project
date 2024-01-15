@@ -3,96 +3,112 @@
     "nome": "Gradient Graphic T-shirt",
     "descricao": "Uma camiseta branca básica e confortável.",
     "imagem": "src/img/product-image.png",
-    "preco": "$145"
+    "preco": "$145",
+    "quantidade": "1"
   },
   {
     "nome": "Polo with Tipping Details",
     "descricao": "Uma calça jeans casual para uso diário.",
     "imagem": "src/img/product-image2.png",
-    "preco": "$180"
+    "preco": "$180",
+    "quantidade": "1"
   },
   {
-    "nome": "CHECKERED SHIRT",
+    "nome": "CHECKERED SHIRT NIRVANA",
     "descricao": "Um vestido floral elegante para ocasiões especiais.",
     "imagem": "src/img/product-image3.png",
-    "preco": "$240"
+    "preco": "$240",
+    "quantidade": "1"
   },
   {
     "nome": "Gradient Graphic T-shirt",
     "descricao": "Uma camiseta branca básica e confortável.",
     "imagem": "src/img/product-image.png",
-    "preco": "$145"
+    "preco": "$145",
+    "quantidade": "1"
   },
   {
     "nome": "Polo with Tipping Details",
     "descricao": "Uma calça jeans casual para uso diário.",
     "imagem": "src/img/product-image2.png",
-    "preco": "$180"
+    "preco": "$180",
+    "quantidade": "1"
   },
   {
-    "nome": "CHECKERED SHIRT",
+    "nome": "CHECKERED SHIRT NIRVANA",
     "descricao": "Um vestido floral elegante para ocasiões especiais.",
     "imagem": "src/img/product-image3.png",
-    "preco": "$240"
+    "preco": "$240",
+    "quantidade": "1"
   },
   {
     "nome": "Gradient Graphic T-shirt",
     "descricao": "Uma camiseta branca básica e confortável.",
     "imagem": "src/img/product-image.png",
-    "preco": "$145"
+    "preco": "$145",
+    "quantidade": "1"
   },
   {
     "nome": "Polo with Tipping Details",
     "descricao": "Uma calça jeans casual para uso diário.",
     "imagem": "src/img/product-image2.png",
-    "preco": "$180"
+    "preco": "$180",
+    "quantidade": "1"
   },
   {
-    "nome": "CHECKERED SHIRT",
+    "nome": "CHECKERED SHIRT NIRVANA",
     "descricao": "Um vestido floral elegante para ocasiões especiais.",
     "imagem": "src/img/product-image3.png",
-    "preco": "$240"
+    "preco": "$240",
+    "quantidade": "1"
   },
   {
     "nome": "Gradient Graphic T-shirt",
     "descricao": "Uma camiseta branca básica e confortável.",
     "imagem": "src/img/product-image.png",
-    "preco": "$145"
+    "preco": "$145",
+    "quantidade": "1"
   },
   {
     "nome": "Polo with Tipping Details",
     "descricao": "Uma calça jeans casual para uso diário.",
     "imagem": "src/img/product-image2.png",
-    "preco": "$180"
+    "preco": "$180",
+    "quantidade": "1"
   },
   {
-    "nome": "CHECKERED SHIRT",
+    "nome": "CHECKERED SHIRT NIRVANA",
     "descricao": "Um vestido floral elegante para ocasiões especiais.",
     "imagem": "src/img/product-image3.png",
-    "preco": "$240"
+    "preco": "$240",
+    "quantidade": "1"
   },
   {
     "nome": "Gradient Graphic T-shirt",
     "descricao": "Uma camiseta branca básica e confortável.",
     "imagem": "src/img/product-image.png",
-    "preco": "$145"
+    "preco": "$145",
+    "quantidade": "1"
   },
   {
     "nome": "Polo with Tipping Details",
     "descricao": "Uma calça jeans casual para uso diário.",
     "imagem": "src/img/product-image2.png",
-    "preco": "$180"
+    "preco": "$180",
+    "quantidade": "1"
   },
   {
-    "nome": "CHECKERED SHIRT",
+    "nome": "CHECKERED SHIRT NIRVANA",
     "descricao": "Um vestido floral elegante para ocasiões especiais.",
     "imagem": "src/img/product-image3.png",
-    "preco": "$240"
+    "preco": "$240",
+    "quantidade": "1"
   },
   {
     "nome": "Gradient Graphic T-shirt",
     "descricao": "Uma camiseta branca básica e confortável.",
     "imagem": "src/img/product-image.png",
-    "preco": "$145"
+    "preco": "$145",
+    "quantidade": "1"
   }
 ]
