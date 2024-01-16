@@ -361,6 +361,8 @@ const deleteItemCart = () => {
       // priceCurrent.innerHTML = `$${newPrice}`
 
       cartItem.remove();
+      priceUp = 0
+      updatePrice(0)
     }
   });
 };
