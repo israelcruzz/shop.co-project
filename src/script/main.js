@@ -1,4 +1,5 @@
 let data = []
+let priceUp = 0;
 
 const getData = () => {
     fetch('/roupas.json')
@@ -276,25 +277,40 @@ const getItemCart = (item) => {
   areaProducts.appendChild(div)
 
   controlsCart.listenerAmount(div)
+  
+  const priceAmountReplace = priceCard.replace("$", "")
+  const priceAmountNumber = Number(priceAmountReplace)
+
+  updatePrice(priceAmountNumber)
 
   modalOpen()
 }
 
 const controlsCart = {
   addAmount(card){
-    // const amount = card.querySelector('.price-cart').textContent
-    // const amountReplace= amount.replace("$", "")
-    // const amountNumber = Number(amountReplace)
+    const amount = card.querySelector('.price-cart').textContent
+    const amountReplace= amount.replace("$", "")
+    const amountNumber = Number(amountReplace)
     let amountCard = card.querySelector('.number-cart')
     let currentAmount = Number(amountCard.textContent)
     amountCard.innerHTML = currentAmount += 1
+
+    updatePriceListener(amountNumber)
   },
   removeAmount(card){
+    const amount = card.querySelector('.price-cart').textContent
+    const amountReplace= amount.replace("$", "")
+    const amountNumber = Number(amountReplace)
     let amountCard = card.querySelector('.number-cart')
     let currentAmount = Number(amountCard.textContent)
     amountCard.innerHTML = currentAmount -= 1
 
-    if(currentAmount <= 0)  amountCard.innerHTML = currentAmount += 1
+    if(currentAmount <= 0){
+      amountCard.innerHTML = currentAmount += 1
+      return amountCard
+    }
+
+    updatePriceListener(-amountNumber)
   },
   listenerAmount(div){
     const add = div.querySelector('.add-cart')
@@ -312,15 +328,42 @@ const controlsCart = {
   }
 }
 
+const updatePrice = (price) => {
+  priceUp += price
+  const priceCurrent = html.get('.price-real')
+  priceCurrent.innerHTML = `$${priceUp}`
+}
+
+const updatePriceListener = (quantity) => {
+  const priceAdd = priceUp += quantity
+
+  const priceCurrent = html.get('.price-real')
+  priceCurrent.innerHTML = `$${priceAdd}`
+}
+
 const deleteItemCart = () => {
   document.addEventListener('click', (e) => {
-    let clickArea = e.target
-    
-    if(clickArea.classList.contains('delete-card')){
-      clickArea.parentElement.parentElement.parentElement.remove()
+    let clickArea = e.target;
+
+    if (clickArea.classList.contains('delete-card')) {
+      const cartItem = clickArea.parentElement.parentElement.parentElement;
+
+      // const priceElement = cartItem.querySelector('.price-cart');
+      // const priceString = priceElement.textContent.replace('$', '');
+      // const price = Number(priceString);
+
+      // let newPrice = priceUp - price
+      // if(newPrice <= 0){
+      //   priceUp = 0
+      //   newPrice = 0
+      // } 
+      // const priceCurrent = html.get('.price-real')
+      // priceCurrent.innerHTML = `$${newPrice}`
+
+      cartItem.remove();
     }
-  })
-}
+  });
+};
 
 function init(){
   getData()
