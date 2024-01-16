@@ -119,7 +119,6 @@ const update = () => {
   list.update()
   updateNumber()
   search()
-  getCartButtons()
 }
 
 const search = () => {
@@ -166,6 +165,10 @@ const modalOpen = () => {
 const exitModal = () => {
     html.get('.cart-content').close()
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  getCartButtons()
+})
 
 const getCartButtons = () => {
   document.addEventListener('click', (e) => {
@@ -247,6 +250,7 @@ const getItemCart = (item) => {
   const priceAmount = document.createElement('div')
   priceAmount.classList.add('price-amount')
   const price = document.createElement('h1')
+  price.classList.add('price-cart')
   price.innerHTML = priceCard
   const amountContent = document.createElement('div')
   amountContent.classList.add('amount-content')
@@ -271,7 +275,51 @@ const getItemCart = (item) => {
   div.appendChild(sectionDetails)
   areaProducts.appendChild(div)
 
+  controlsCart.listenerAmount(div)
+
   modalOpen()
+}
+
+const controlsCart = {
+  addAmount(card){
+    // const amount = card.querySelector('.price-cart').textContent
+    // const amountReplace= amount.replace("$", "")
+    // const amountNumber = Number(amountReplace)
+    let amountCard = card.querySelector('.number-cart')
+    let currentAmount = Number(amountCard.textContent)
+    amountCard.innerHTML = currentAmount += 1
+  },
+  removeAmount(card){
+    let amountCard = card.querySelector('.number-cart')
+    let currentAmount = Number(amountCard.textContent)
+    amountCard.innerHTML = currentAmount -= 1
+
+    if(currentAmount <= 0)  amountCard.innerHTML = currentAmount += 1
+  },
+  listenerAmount(div){
+    const add = div.querySelector('.add-cart')
+    const remove = div.querySelector('.remove-cart')
+    
+    add.addEventListener('click', () => {
+      this.addAmount(div)
+    })
+
+    remove.addEventListener('click', () => {
+      this.removeAmount(div)
+    })
+
+    deleteItemCart()
+  }
+}
+
+const deleteItemCart = () => {
+  document.addEventListener('click', (e) => {
+    let clickArea = e.target
+    
+    if(clickArea.classList.contains('delete-card')){
+      clickArea.parentElement.parentElement.parentElement.remove()
+    }
+  })
 }
 
 function init(){
