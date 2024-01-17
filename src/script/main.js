@@ -323,8 +323,6 @@ const controlsCart = {
     remove.addEventListener('click', () => {
       this.removeAmount(div)
     })
-
-    deleteItemCart()
   }
 }
 
@@ -335,10 +333,9 @@ const updatePrice = (price) => {
 }
 
 const updatePriceListener = (quantity) => {
-  const priceAdd = priceUp += quantity
-
+  priceUp += quantity
   const priceCurrent = html.get('.price-real')
-  priceCurrent.innerHTML = `$${priceAdd}`
+  priceCurrent.innerHTML = `$${priceUp}`
 }
 
 const deleteItemCart = () => {
@@ -347,22 +344,20 @@ const deleteItemCart = () => {
 
     if (clickArea.classList.contains('delete-card')) {
       const cartItem = clickArea.parentElement.parentElement.parentElement;
+      const priceElement = cartItem.querySelector('.price-cart');
+      const priceString = priceElement.textContent.replace('$', '');
+      const price = Number(priceString);
+      const quantity = cartItem.querySelector('.number-cart').textContent
+      const priceTotal = (price * Number(quantity))
 
-      // const priceElement = cartItem.querySelector('.price-cart');
-      // const priceString = priceElement.textContent.replace('$', '');
-      // const price = Number(priceString);
+      priceUp -= priceTotal
 
-      // let newPrice = priceUp - price
-      // if(newPrice <= 0){
-      //   priceUp = 0
-      //   newPrice = 0
-      // } 
-      // const priceCurrent = html.get('.price-real')
-      // priceCurrent.innerHTML = `$${newPrice}`
+      if(priceUp <= 0) priceUp = 0
 
-      cartItem.remove();
-      priceUp = 0
-      updatePrice(0)
+      const priceCurrent = html.get('.price-real')
+      priceCurrent.innerHTML = `$${priceUp}`
+
+      cartItem.remove()
     }
   });
 };
@@ -370,6 +365,7 @@ const deleteItemCart = () => {
 function init(){
   getData()
   controls.callListeners()
+  deleteItemCart()
 }
 
 init()
